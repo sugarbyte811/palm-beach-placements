@@ -678,47 +678,97 @@ section { padding: 72px 6%; }
 }
 .guarantee .btn-g:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
 
-/* CTA */
-.cta-section {
+/* CONTACT FORM */
+.contact-section {
   background: var(--cream);
-  text-align: center;
   padding: 72px 6%;
 }
-.cta-section h2 {
+.contact-section h2 {
+  text-align: center;
   font-family: 'Playfair Display', serif;
   font-size: clamp(26px, 5vw, 36px);
   font-weight: 900;
   color: var(--text-dark);
   margin-bottom: 14px;
 }
-.cta-section p {
+.contact-section > p {
+  text-align: center;
   color: var(--text-muted);
   font-size: 15px;
   max-width: 460px;
-  margin: 0 auto 28px;
+  margin: 0 auto 36px;
   line-height: 1.6;
 }
-.cta-btn {
-  display: inline-block;
-  padding: 16px 40px;
-  background: linear-gradient(135deg, #f2c6cc, #f5d5d9);
-  color: var(--text-dark);
-  border-radius: 40px;
-  font-size: 12px;
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+.form-row .form-group { flex: 1; }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-decoration: none;
-  border: 1px solid rgba(196,164,74,0.25);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-  transition: all 0.2s;
-  font-family: 'Montserrat', sans-serif;
-}
-.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
-.cta-contact {
-  margin-top: 20px;
-  font-size: 13px;
   color: var(--text-muted);
+}
+.form-group input,
+.form-group textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(196,164,74,0.25);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(217,179,106,0.12);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.form-submit {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 20px rgba(196,164,74,0.25);
+  margin-top: 8px;
+}
+.form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(196,164,74,0.35);
+}
+@media (max-width: 480px) {
+  .form-row { flex-direction: column; }
 }
 
 /* FOOTER */
@@ -974,12 +1024,30 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <a href="#contact" class="btn-g">Learn More</a>
 </div>
 
-<!-- ===== CTA ===== -->
-<section class="cta-section" id="contact">
-  <h2>Ready to Build Your Sales Team?</h2>
-  <p>Book a free discovery call. We'll learn your needs and show you exactly how we'll find your next closer.</p>
-  <a href="mailto:madisonmiller@palmbeachplacements.com" class="cta-btn">Book Discovery Call &rarr;</a>
-  <p class="cta-contact">📞 (314) 920-6658 &middot; madisonmiller@palmbeachplacements.com</p>
+<!-- ===== CONTACT FORM ===== -->
+<section class="contact-section" id="contact">
+  <h2>Book a Discovery Call</h2>
+  <p>Tell us about your hiring needs and we'll be in touch within 24 hours.</p>
+  <form class="contact-form" action="https://formsubmit.co/madisonmiller@palmbeachplacements.com" method="POST">
+    <input type="hidden" name="_subject" value="New inquiry from Palm Beach Placements website">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us about the role you're looking to fill..." required></textarea>
+    </div>
+    <button type="submit" class="form-submit">Send Message &rarr;</button>
+  </form>
 </section>
 
 <!-- ===== FOOTER ===== -->
