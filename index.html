@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palm Beach Placements | Elite Sales Recruiting</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat:wght@300;400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #d9b36a;
+  --gold-light: #e4c583;
+  --gold-pale: #e8d5a8;
+  --tan: #d8c6a8;
+  --cream: #fdf6f0;
+  --white: #ffffff;
+  --text-dark: #2a1a20;
+  --text-body: #3d2e33;
+  --text-muted: #7a6b70;
+  --pink-deep: #3d1c2a;
+  --maroon: #4a2828;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-body);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #1a0f14;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    url('hero-bg.png') center/cover no-repeat;
+  z-index: 0;
+}
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center 40%, rgba(8,4,6,0.6) 0%, rgba(8,4,6,0.35) 50%, rgba(8,4,6,0.15) 100%),
+    linear-gradient(to bottom, rgba(8,4,6,0.45) 0%, rgba(8,4,6,0.1) 35%, rgba(8,4,6,0.3) 100%);
+}
+
+/* NAV */
+nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-icon svg {
+  width: 36px;
+  height: 36px;
+}
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.4;
+}
+.logo-text .sub {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  font-size: 9px;
+  display: block;
+  color: var(--tan);
+}
+.hamburger {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  width: 18px;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 8%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 7.5vw, 52px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 2px;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+.hero h1 .script {
+  display: block;
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--gold-light);
+  font-size: clamp(42px, 9vw, 62px);
+  line-height: 1.4;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+.hero-ornament {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 10px;
+  margin: 6px 0 20px;
+  opacity: 0.5;
+}
+.hero .tagline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.75;
+  margin-bottom: 32px;
+  max-width: 480px;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+  letter-spacing: 0.2px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* HERO BUTTONS — frosted glass */
+.hero-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
+}
+.btn-frost {
+  display: block;
+  padding: 16px 28px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.25);
+  transition: all 0.25s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+.btn-frost:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.4);
+  transform: translateY(-1px);
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  margin: 32px auto 0;
+  background: rgba(8,5,12,0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 8px;
+  border: 1px solid rgba(201,162,75,0.15);
+  max-width: 520px;
+  width: 90%;
+  padding: 20px 0;
+}
+.stat {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+.stat + .stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(201,162,75,0.3);
+}
+.stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5.5vw, 38px);
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+.stat .label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--tan);
+  margin-top: 5px;
+}
+
+/* ===== RECENT PLACEMENTS ===== */
+.recent-section {
+  position: relative;
+  z-index: 5;
+  padding: 28px 6% 32px;
+}
+.recent-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.recent-title .sparkle {
+  font-size: 10px;
+  margin: 0 4px;
+}
+.recent-carousel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.carousel-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  transition: all 0.2s;
+}
+.carousel-arrow:hover { background: rgba(255,255,255,0.2); }
+.carousel-track {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.13);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.carousel-item {
+  flex: 1;
+  text-align: center;
+  padding: 18px 8px;
+  position: relative;
+}
+.carousel-item + .carousel-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(255,255,255,0.12);
+}
+.carousel-item .icon-wrap {
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 8px;
+}
+.carousel-item .icon-wrap svg {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item .name {
+  font-family: 'Playfair Display', serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.carousel-item .type {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-top: 3px;
+}
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 12px;
+}
+.carousel-dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+}
+.carousel-dots .dot.active {
+  background: var(--gold);
+}
+
+/* ===== GRADIENT TRANSITION ===== */
+.hero-fade {
+  position: relative;
+  z-index: 5;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, var(--cream));
+}
+
+/* ===== SECTIONS ===== */
+section { padding: 72px 6%; }
+.section-eyebrow {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.section-heading {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.section-sub {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.65;
+}
+
+/* HOW IT WORKS */
+.how { background: var(--white); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.step {
+  text-align: center;
+  padding: 28px 20px;
+}
+.step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2c6cc, #f5d5d9);
+  border: 1px solid rgba(196,164,74,0.2);
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+.step h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+.step p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* INDUSTRIES */
+.industries { background: var(--cream); }
+.ind-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ind-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 1px solid rgba(196,164,74,0.1);
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.ind-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+.ind-card .badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: linear-gradient(135deg, rgba(196,164,74,0.1), rgba(244,198,204,0.2));
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.ind-card .em { font-size: 32px; margin-bottom: 14px; display: block; }
+.ind-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.ind-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 14px; }
+.ind-card .roles { display: flex; flex-wrap: wrap; gap: 5px; }
+.ind-card .role {
+  background: #f8e0e4;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* PRICING */
+.pricing { background: var(--white); }
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.price-card {
+  border: 1px solid rgba(196,164,74,0.15);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: all 0.2s;
+  position: relative;
+  background: var(--white);
+}
+.price-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, rgba(244,198,204,0.08) 0%, white 50%);
+  box-shadow: 0 12px 40px rgba(196,164,74,0.12);
+}
+.price-card.featured::before {
+  content: 'MOST POPULAR';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 5px 18px;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+}
+.price-card:hover { transform: translateY(-3px); }
+.price-card .tier {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.price-card .amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--text-dark);
+}
+.price-card .amount sup { font-size: 22px; vertical-align: super; }
+.price-card .per { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+.price-card .desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 18px 0;
+  line-height: 1.6;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.price-card ul {
+  list-style: none;
+  text-align: left;
+  margin: 18px 0;
+}
+.price-card li {
+  font-size: 13px;
+  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-body);
+}
+.price-card li::before {
+  content: '✓';
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 13px;
+}
+.price-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 12px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.price-btn.gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(196,164,74,0.25);
+}
+.price-btn.bordered {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1.5px solid rgba(196,164,74,0.4);
+}
+.price-btn:hover { transform: translateY(-2px); }
+
+/* TESTIMONIALS */
+.testimonials {
+  background: linear-gradient(135deg, var(--pink-deep), #4a2535);
+  color: white;
+}
+.testimonials .section-eyebrow { color: var(--gold-light); }
+.testimonials .section-heading { color: white; }
+.testimonials .section-sub { color: rgba(255,255,255,0.6); }
+.test-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.test-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+.test-card .stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; letter-spacing: 2px; }
+.test-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.65;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+.test-card .author { display: flex; align-items: center; gap: 12px; }
+.test-card .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #d4838e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  color: white;
+}
+.test-card .name { font-weight: 600; font-size: 13px; }
+.test-card .role-t { font-size: 11px; color: rgba(255,255,255,0.45); }
+
+/* GUARANTEE */
+.guarantee {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--text-dark);
+  text-align: center;
+  padding: 56px 6%;
+}
+.guarantee h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+.guarantee p {
+  font-size: 15px;
+  opacity: 0.8;
+  max-width: 560px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
+.guarantee .btn-g {
+  display: inline-block;
+  padding: 14px 36px;
+  background: var(--white);
+  color: var(--gold);
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.guarantee .btn-g:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+
+/* CTA */
+.cta-section {
+  background: var(--cream);
+  text-align: center;
+  padding: 72px 6%;
+}
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 5vw, 36px);
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+}
+.cta-section p {
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 460px;
+  margin: 0 auto 28px;
+  line-height: 1.6;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #f2c6cc, #f5d5d9);
+  color: var(--text-dark);
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid rgba(196,164,74,0.25);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: all 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.1); }
+.cta-contact {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* FOOTER */
+footer {
+  background: var(--pink-deep);
+  color: rgba(255,255,255,0.45);
+  padding: 36px 6%;
+  text-align: center;
+}
+footer .f-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  margin-bottom: 10px;
+}
+footer p { font-size: 12px; line-height: 1.8; }
+footer a { color: var(--gold-light); text-decoration: none; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 34px; }
+  .hero h1 .script { font-size: 40px; }
+  .hero-content { padding: 0 7%; }
+  .hero .tagline { font-size: 13px; max-width: 90%; }
+  .hero-btns { max-width: 85%; }
+  .stats-bar { margin: 24px auto 0; width: 86%; }
+  .stat .num { font-size: 26px; }
+  .stat .label { font-size: 6.5px; letter-spacing: 1.5px; }
+  .carousel-item .name { font-size: 8px; letter-spacing: 1.5px; }
+  .recent-section { padding: 24px 7% 28px; }
+  .steps, .ind-grid, .price-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .test-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 390px) {
+  .hero h1 { font-size: 30px; }
+  .hero h1 .script { font-size: 36px; }
+  .hero .tagline { font-size: 12.5px; }
+  .btn-frost { padding: 14px 20px; font-size: 10px; letter-spacing: 2px; }
+  .stat .num { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-bg"></div>
+
+  <nav>
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="18" y1="34" x2="18" y2="14" stroke="#d9b36a" stroke-width="1.5"/>
+          <path d="M18 14 C15 8, 8 6, 4 8" stroke="#d9b36a" stroke-width="1.2" fill="none"/>
+          <path d="M18 14 C21 8, 28 6, 32 8" stroke="#d9b36a" stroke-width="1.2" fill="none"/>
+          <path d="M18 14 C16 6, 12 2, 8 1" stroke="#d9b36a" stroke-width="1.2" fill="none"/>
+          <path d="M18 14 C20 6, 24 2, 28 1" stroke="#d9b36a" stroke-width="1.2" fill="none"/>
+          <path d="M18 14 C17 5, 16 1, 14 0" stroke="#d9b36a" stroke-width="1" fill="none"/>
+          <path d="M18 14 C19 5, 20 1, 22 0" stroke="#d9b36a" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        PALM BEACH<br>
+        <span class="sub">PLACEMENTS</span>
+      </div>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="hero-content">
+    <h1>Elite Sales Talent,<span class="script">Placed &amp; Producing</span></h1>
+    <div class="hero-ornament">✦ ✦ ✦</div>
+    <p class="tagline">We recruit top-performing commissioned sales reps for high-growth companies in construction, marketing, advertising, and beyond — so you can stop searching and start closing.</p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-frost">View Placement Packages &rarr;</a>
+      <a href="#how" class="btn-frost">How It Works</a>
+    </div>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat"><div class="num">500+</div><div class="label">Reps Placed</div></div>
+    <div class="stat"><div class="num">92%</div><div class="label">Retention Rate</div></div>
+    <div class="stat"><div class="num">14</div><div class="label">Days Avg. Fill</div></div>
+  </div>
+
+  <div class="recent-section">
+    <div class="recent-title"><span class="sparkle">✦</span> Recent Placements <span class="sparkle">✦</span></div>
+    <div class="recent-carousel">
+      <div class="carousel-arrow">&#8249;</div>
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M12 36 V20 L20 12 L28 20 V36 Z" stroke="#4a8c5c" stroke-width="1.8" fill="none"/>
+              <path d="M17 36 V28 H23 V36" stroke="#4a8c5c" stroke-width="1.2" fill="none"/>
+              <path d="M8 22 L20 10 L32 22" stroke="#4a8c5c" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="name">Everglade</div>
+          <div class="type">Construction</div>
+        </div>
+        <div class="carousel-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M4 24 C10 16, 16 28, 22 20 S32 28, 38 20" stroke="#3a7da6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+              <path d="M4 30 C10 22, 16 34, 22 26 S32 34, 38 26" stroke="#3a7da6" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="name">Coastline</div>
+          <div class="type">Marketing</div>
+        </div>
+        <div class="carousel-item">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="8" stroke="#d4943e" stroke-width="1.8" fill="none"/>
+              <line x1="20" y1="8" x2="20" y2="11" stroke="#d4943e" stroke-width="1.5"/>
+              <line x1="20" y1="29" x2="20" y2="32" stroke="#d4943e" stroke-width="1.5"/>
+              <line x1="8" y1="20" x2="11" y2="20" stroke="#d4943e" stroke-width="1.5"/>
+              <line x1="29" y1="20" x2="32" y2="20" stroke="#d4943e" stroke-width="1.5"/>
+              <line x1="11.5" y1="11.5" x2="13.5" y2="13.5" stroke="#d4943e" stroke-width="1.2"/>
+              <line x1="26.5" y1="26.5" x2="28.5" y2="28.5" stroke="#d4943e" stroke-width="1.2"/>
+              <line x1="28.5" y1="11.5" x2="26.5" y2="13.5" stroke="#d4943e" stroke-width="1.2"/>
+              <line x1="13.5" y1="26.5" x2="11.5" y2="28.5" stroke="#d4943e" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="name">Sunset</div>
+          <div class="type">Advertising</div>
+        </div>
+      </div>
+      <div class="carousel-arrow">&#8250;</div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</div>
+<div class="hero-fade"></div>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how" id="how">
+  <div class="section-eyebrow">The Process</div>
+  <h2 class="section-heading">Three Steps to Your Next Closer</h2>
+  <p class="section-sub">We handle everything: sourcing, vetting, and matching so you get sales reps who actually produce.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Discovery Call</h3>
+      <p>We learn your product, market, comp plan, and culture. We don't send bodies. We send fits.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Curated Matching</h3>
+      <p>Our double-recruiting model sources from two pipelines simultaneously: active hunters and passive top performers already producing elsewhere.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Placement & Support</h3>
+      <p>We present 2 to 4 pre-vetted candidates with sales metrics, handle negotiations, and support the first 90 days on the job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INDUSTRIES ===== -->
+<section class="industries" id="industries">
+  <div class="section-eyebrow">Industries We Serve</div>
+  <h2 class="section-heading">Built for Commission-Driven Sales</h2>
+  <p class="section-sub">We specialize in industries where sales reps eat what they kill, and where the right hire means real revenue.</p>
+  <div class="ind-grid">
+    <div class="ind-card">
+      <div class="badge">Top Industry</div>
+      <span class="em">🏗️</span>
+      <h3>Construction</h3>
+      <p>General contractors, subcontractors, building materials, and construction services. We find reps who can sell six- and seven-figure projects.</p>
+      <div class="roles">
+        <span class="role">Outside Sales</span>
+        <span class="role">Business Development</span>
+        <span class="role">Estimator/Closer</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="badge">Top Industry</div>
+      <span class="em">📈</span>
+      <h3>Marketing</h3>
+      <p>Agencies, MarTech, and digital marketing companies looking for closers who understand ROI and can sell retainer-based services.</p>
+      <div class="roles">
+        <span class="role">Account Executive</span>
+        <span class="role">New Business</span>
+        <span class="role">Strategic Sales</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <div class="badge">Top Industry</div>
+      <span class="em">🎯</span>
+      <h3>Advertising</h3>
+      <p>Media, programmatic, OOH, and digital ad sales. Reps who can build books of business from scratch and grow accounts.</p>
+      <div class="roles">
+        <span class="role">Media Sales</span>
+        <span class="role">Ad Sales Rep</span>
+        <span class="role">Agency Partnerships</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <span class="em">☀️</span>
+      <h3>Solar & Energy</h3>
+      <p>Residential and commercial solar, roofing, and energy efficiency. High-commission, high-volume closers.</p>
+      <div class="roles">
+        <span class="role">Solar Closer</span>
+        <span class="role">Door-to-Door</span>
+        <span class="role">Inside Sales</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <span class="em">🔧</span>
+      <h3>Home Services</h3>
+      <p>HVAC, plumbing, roofing, pest control, and restoration. Reps who close in the home and upsell like pros.</p>
+      <div class="roles">
+        <span class="role">In-Home Sales</span>
+        <span class="role">Comfort Advisor</span>
+        <span class="role">Setter/Closer</span>
+      </div>
+    </div>
+    <div class="ind-card">
+      <span class="em">🏠</span>
+      <h3>Real Estate & Insurance</h3>
+      <p>Brokerages, title companies, mortgage, and insurance agencies. High-value relationship sellers.</p>
+      <div class="roles">
+        <span class="role">Inside Sales</span>
+        <span class="role">B2B Development</span>
+        <span class="role">Field Sales</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing" id="pricing">
+  <div class="section-eyebrow">Investment</div>
+  <h2 class="section-heading">Placement Packages</h2>
+  <p class="section-sub">Flat-fee pricing. No hidden costs. No percentage of salary. You know exactly what you're paying before we start.</p>
+  <div class="price-grid">
+    <div class="price-card">
+      <div class="tier">Starter</div>
+      <div class="amount"><sup>$</sup>5,000</div>
+      <div class="per">per placement</div>
+      <div class="desc">Ideal for companies hiring their first or second commissioned rep into a proven sales role.</div>
+      <ul>
+        <li>1 sales placement</li>
+        <li>Pre-vetted candidate pool</li>
+        <li>Skills & personality assessment</li>
+        <li>30-day placement guarantee</li>
+        <li>Standard onboarding support</li>
+      </ul>
+      <a href="#contact" class="price-btn bordered">Get Started</a>
+    </div>
+    <div class="price-card featured">
+      <div class="tier">Growth</div>
+      <div class="amount"><sup>$</sup>9,500</div>
+      <div class="per">per placement</div>
+      <div class="desc">For scaling teams. We double-recruit from active and passive pipelines to find top performers fast.</div>
+      <ul>
+        <li>1 to 3 sales placements</li>
+        <li>Double-pipeline recruiting</li>
+        <li>Revenue history verification</li>
+        <li>Comp plan consulting</li>
+        <li>60-day placement guarantee</li>
+        <li>90-day performance check-ins</li>
+        <li>Priority candidate access</li>
+      </ul>
+      <a href="#contact" class="price-btn gold">Get Started &rarr;</a>
+    </div>
+    <div class="price-card">
+      <div class="tier">Enterprise</div>
+      <div class="amount"><sup>$</sup>15,000</div>
+      <div class="per">per placement</div>
+      <div class="desc">Full-service executive sales recruiting for leadership roles and high-impact closers.</div>
+      <ul>
+        <li>Unlimited placements</li>
+        <li>Executive-level sales roles</li>
+        <li>Market compensation analysis</li>
+        <li>Custom recruiting campaigns</li>
+        <li>90-day placement guarantee</li>
+        <li>Dedicated account manager</li>
+        <li>Sales team structure consulting</li>
+        <li>Ongoing talent pipeline</li>
+      </ul>
+      <a href="#contact" class="price-btn bordered">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="results">
+  <div class="section-eyebrow">Client Results</div>
+  <h2 class="section-heading">They Came to Hire. They Stayed to Scale.</h2>
+  <p class="section-sub">Real results from real companies who stopped guessing and started placing.</p>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p>"We'd been through three recruiting agencies that just sent us warm bodies. Palm Beach Placements actually understood construction sales. Our first rep closed $400K in his first quarter."</p>
+      <div class="author">
+        <div class="avatar">RC</div>
+        <div><div class="name">Ryan C.</div><div class="role-t">VP of Sales, Coastal Builders Group</div></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p>"The double-recruiting model is legit. They found us a passive candidate who was already crushing it at a competitor. She's now our #1 AE and building a team under her."</p>
+      <div class="author">
+        <div class="avatar">JM</div>
+        <div><div class="name">Jenna M.</div><div class="role-t">CEO, BrightPath Marketing</div></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p>"We needed three ad sales reps yesterday. PBP delivered all three in under two weeks and every one of them hit quota in month one. Worth every penny of the $15K package."</p>
+      <div class="author">
+        <div class="avatar">DT</div>
+        <div><div class="name">Derek T.</div><div class="role-t">Sales Director, Apex Media</div></div>
+      </div>
+    </div>
+    <div class="test-card">
+      <div class="stars">★ ★ ★ ★ ★</div>
+      <p>"I was skeptical about the flat fee, but it turns out it's way cheaper than the 20% of salary I was paying other firms. And the quality is actually better. No-brainer."</p>
+      <div class="author">
+        <div class="avatar">SK</div>
+        <div><div class="name">Sarah K.</div><div class="role-t">Owner, SunCoast Solar</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GUARANTEE ===== -->
+<div class="guarantee">
+  <h2>🛡️ Our Placement Guarantee</h2>
+  <p>If your placed rep doesn't work out within the guarantee period, we replace them at no additional cost. We're in this to build your sales team, not just fill a seat.</p>
+  <a href="#contact" class="btn-g">Learn More</a>
+</div>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section" id="contact">
+  <h2>Ready to Build Your Sales Team?</h2>
+  <p>Book a free discovery call. We'll learn your needs and show you exactly how we'll find your next closer.</p>
+  <a href="mailto:info@palmbeachplacements.com" class="cta-btn">Book Discovery Call &rarr;</a>
+  <p class="cta-contact">📞 (314) 920-6658 &middot; info@palmbeachplacements.com</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="f-logo">Palm Beach Placements</div>
+  <p>Elite Sales Recruiting &middot; South Florida & Nationwide<br>
+  &copy; 2026 Palm Beach Placements LLC. All rights reserved.<br>
+  <a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
