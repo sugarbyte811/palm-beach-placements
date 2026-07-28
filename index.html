@@ -111,6 +111,47 @@ nav {
   height: 1.5px;
   background: #fff;
   border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(3.25px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-3.25px) rotate(-45deg); }
+
+/* MOBILE NAV */
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(8,5,12,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(201,162,75,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+.mobile-nav.open {
+  max-height: 300px;
+  padding: 12px 0;
+}
+.mobile-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 6%;
+  transition: background 0.2s;
+}
+.mobile-nav a:hover {
+  background: rgba(217,179,106,0.1);
+  color: var(--gold-light);
 }
 
 /* HERO CONTENT */
@@ -838,9 +879,16 @@ footer a { color: var(--gold-light); text-decoration: none; }
         <span class="sub">PLACEMENTS</span>
       </div>
     </div>
-    <button class="hamburger" aria-label="Menu">
+    <button class="hamburger" aria-label="Menu" onclick="document.getElementById('mobileNav').classList.toggle('open'); this.classList.toggle('active')">
       <span></span><span></span><span></span>
     </button>
+
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#how" onclick="document.getElementById('mobileNav').classList.remove('open'); document.querySelector('.hamburger').classList.remove('active')">How It Works</a>
+      <a href="#industries" onclick="document.getElementById('mobileNav').classList.remove('open'); document.querySelector('.hamburger').classList.remove('active')">Industries</a>
+      <a href="#pricing" onclick="document.getElementById('mobileNav').classList.remove('open'); document.querySelector('.hamburger').classList.remove('active')">Pricing</a>
+      <a href="#contact" onclick="document.getElementById('mobileNav').classList.remove('open'); document.querySelector('.hamburger').classList.remove('active')">Contact</a>
+    </div>
   </nav>
 
   <div class="hero-content">
