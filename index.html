@@ -865,15 +865,11 @@ section { padding: 72px 6%; }
 }
 .team-photo {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--pink-deep), #7a3a50);
+  width: 300px;
+  height: 380px;
+  border-radius: 20px;
   border: 3px solid rgba(217,179,106,0.35);
-  box-shadow: 0 16px 48px rgba(61,28,42,0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 20px 56px rgba(61,28,42,0.18);
   position: relative;
   overflow: hidden;
 }
@@ -881,13 +877,7 @@ section { padding: 72px 6%; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.team-initials {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 900;
-  color: var(--gold-light);
-  letter-spacing: 2px;
+  object-position: center top;
 }
 .team-info {
   flex: 1;
@@ -930,10 +920,9 @@ section { padding: 72px 6%; }
     gap: 32px;
   }
   .team-photo {
-    width: 160px;
-    height: 160px;
+    width: 260px;
+    height: 320px;
   }
-  .team-initials { font-size: 40px; }
   .team-name { font-size: 26px; text-align: center; }
   .team-title { text-align: center; }
   .team-divider { margin: 0 auto 20px; }
@@ -1207,7 +1196,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <h2 class="section-heading">The Person Behind Every Placement</h2>
   <div class="team-card">
     <div class="team-photo">
-      <div class="team-initials">MM</div>
+      <img src="madison-headshot.png" alt="Madison Miller – Founder & Lead Recruiter">
     </div>
     <div class="team-info">
       <h3 class="team-name">Madison Miller</h3>
