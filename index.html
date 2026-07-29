@@ -895,6 +895,26 @@ section { padding: 72px 6%; }
   margin: 0 auto 20px;
 }
 .team-bio { text-align: center; }
+.team-photos-bottom {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+}
+.team-photo-sm {
+  flex: 1;
+  height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(61,28,42,0.13);
+}
+.team-photo-sm img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 .team-info {
   flex: 1;
   padding-top: 8px;
@@ -1224,7 +1244,14 @@ footer a { color: var(--gold-light); text-decoration: none; }
         <p>Outside of recruiting, I'm endlessly curious about people. I'm passionate about personal development, psychology, astrology, and numerology because I'm fascinated by what drives someone beneath the surface. I love understanding who people are at their core, what shapes them, and what motivates them to become the best version of themselves.</p>
         <p>When I'm not working, you'll usually find me with my two favorite beings, my 5 yr old son and my 9 yr old Goldendoodle, outside, preferably somewhere near the water. They're the center of my world, my biggest adventure, and the reason behind everything I do.</p>
       </div>
-
+      <div class="team-photos-bottom">
+        <div class="team-photo-sm">
+          <img src="madison-working2.png" alt="Madison Miller working">
+        </div>
+        <div class="team-photo-sm">
+          <img src="madison-phone2.png" alt="Madison Miller on a call">
+        </div>
+      </div>
     </div>
   </div>
 </section>
