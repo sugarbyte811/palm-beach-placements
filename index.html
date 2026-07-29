@@ -863,34 +863,48 @@ section { padding: 72px 6%; }
   max-width: 960px;
   margin: 0 auto;
 }
-.team-photos {
+.team-card {
+  max-width: 680px;
+  margin: 0 auto;
   display: flex;
-  gap: 12px;
-  flex-shrink: 0;
-  align-items: stretch;
+  flex-direction: column;
+  align-items: center;
 }
 .team-photo-main {
-  width: 210px;
-  height: 390px;
+  width: 200px;
+  height: 240px;
   border-radius: 16px;
   overflow: hidden;
   border: 2px solid rgba(217,179,106,0.35);
-  box-shadow: 0 20px 48px rgba(61,28,42,0.18);
+  box-shadow: 0 16px 40px rgba(61,28,42,0.18);
+  margin-bottom: 24px;
 }
 .team-photo-main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 8%;
 }
-.team-photos-side {
+.team-info {
+  width: 100%;
+  text-align: center;
+  padding-top: 0;
+}
+.team-bio {
+  text-align: left;
+}
+.team-divider {
+  margin: 0 auto 20px;
+}
+.team-photos-bottom {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  margin-top: 32px;
+  width: 100%;
 }
 .team-photo-sm {
-  width: 140px;
-  height: 189px;
+  flex: 1;
+  height: 220px;
   border-radius: 12px;
   overflow: hidden;
   border: 2px solid rgba(217,179,106,0.2);
@@ -942,20 +956,12 @@ section { padding: 72px 6%; }
     align-items: center;
     gap: 32px;
   }
-  .team-photos {
-    flex-direction: column;
-    align-items: center;
-  }
   .team-photo-main {
-    width: 240px;
-    height: 300px;
-  }
-  .team-photos-side {
-    flex-direction: row;
+    width: 180px;
+    height: 210px;
   }
   .team-photo-sm {
-    width: 114px;
-    height: 140px;
+    height: 160px;
   }
   .team-name { font-size: 26px; text-align: center; }
   .team-title { text-align: center; }
@@ -1229,18 +1235,8 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="section-eyebrow">Meet the Team</div>
   <h2 class="section-heading">The Person Behind Every Placement</h2>
   <div class="team-card">
-    <div class="team-photos">
-      <div class="team-photo-main">
-        <img src="madison-headshot.png" alt="Madison Miller">
-      </div>
-      <div class="team-photos-side">
-        <div class="team-photo-sm">
-          <img src="madison-phone.png" alt="Madison Miller on a call">
-        </div>
-        <div class="team-photo-sm">
-          <img src="madison-working.png" alt="Madison Miller working">
-        </div>
-      </div>
+    <div class="team-photo-main">
+      <img src="madison-headshot.png" alt="Madison Miller">
     </div>
     <div class="team-info">
       <h3 class="team-name">Madison Miller</h3>
@@ -1251,6 +1247,14 @@ footer a { color: var(--gold-light); text-decoration: none; }
         <p>I believe recruiting is about more than filling jobs — it's about building relationships, understanding people, and creating long-term success for both clients and candidates. My approach is transparent, responsive, and candidate-first. To me, recruiting doesn't start with submitting resumes; it starts with building excitement. I want every candidate to understand your company, believe in your mission, and genuinely want to work for you before they ever have their first conversation with your team. When candidates are engaged from the beginning, the hiring process is smoother, interviews are more meaningful, and companies make stronger long-term hires.</p>
         <p>Outside of recruiting, I'm endlessly curious about people. I'm passionate about personal development, psychology, astrology, and numerology — because I'm fascinated by what drives someone beneath the surface. I love understanding who people are at their core, what shapes them, and what motivates them to become the best version of themselves.</p>
         <p>When I'm not working, you'll usually find me with my two favorite beings — my 5-year-old son and my 9-year-old Goldendoodle — outside, preferably somewhere near the water. They're the center of my world, my biggest adventure, and the reason behind everything I do.</p>
+      </div>
+      <div class="team-photos-bottom">
+        <div class="team-photo-sm">
+          <img src="madison-phone.png" alt="Madison Miller on a call">
+        </div>
+        <div class="team-photo-sm">
+          <img src="madison-working.png" alt="Madison Miller working">
+        </div>
       </div>
     </div>
   </div>
