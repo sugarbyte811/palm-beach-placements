@@ -863,17 +863,40 @@ section { padding: 72px 6%; }
   max-width: 960px;
   margin: 0 auto;
 }
-.team-photo {
+.team-photos {
+  display: flex;
+  gap: 12px;
   flex-shrink: 0;
-  width: 300px;
-  height: 380px;
-  border-radius: 20px;
-  border: 3px solid rgba(217,179,106,0.35);
-  box-shadow: 0 20px 56px rgba(61,28,42,0.18);
-  position: relative;
-  overflow: hidden;
+  align-items: stretch;
 }
-.team-photo img {
+.team-photo-main {
+  width: 210px;
+  height: 390px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(217,179,106,0.35);
+  box-shadow: 0 20px 48px rgba(61,28,42,0.18);
+}
+.team-photo-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+}
+.team-photos-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.team-photo-sm {
+  width: 140px;
+  height: 189px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(217,179,106,0.2);
+  box-shadow: 0 8px 24px rgba(61,28,42,0.12);
+}
+.team-photo-sm img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -919,9 +942,20 @@ section { padding: 72px 6%; }
     align-items: center;
     gap: 32px;
   }
-  .team-photo {
-    width: 260px;
-    height: 320px;
+  .team-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-photo-main {
+    width: 240px;
+    height: 300px;
+  }
+  .team-photos-side {
+    flex-direction: row;
+  }
+  .team-photo-sm {
+    width: 114px;
+    height: 140px;
   }
   .team-name { font-size: 26px; text-align: center; }
   .team-title { text-align: center; }
@@ -1195,8 +1229,18 @@ footer a { color: var(--gold-light); text-decoration: none; }
   <div class="section-eyebrow">Meet the Team</div>
   <h2 class="section-heading">The Person Behind Every Placement</h2>
   <div class="team-card">
-    <div class="team-photo">
-      <img src="madison-headshot.png" alt="Madison Miller – Founder & Lead Recruiter">
+    <div class="team-photos">
+      <div class="team-photo-main">
+        <img src="madison-headshot.png" alt="Madison Miller">
+      </div>
+      <div class="team-photos-side">
+        <div class="team-photo-sm">
+          <img src="madison-phone.png" alt="Madison Miller on a call">
+        </div>
+        <div class="team-photo-sm">
+          <img src="madison-working.png" alt="Madison Miller working">
+        </div>
+      </div>
     </div>
     <div class="team-info">
       <h3 class="team-name">Madison Miller</h3>
