@@ -897,23 +897,37 @@ section { padding: 72px 6%; }
 .team-bio { text-align: center; }
 .team-photos-bottom {
   display: flex;
-  gap: 16px;
-  margin-top: 40px;
+  gap: 32px;
+  margin-top: 48px;
   width: 100%;
   max-width: 600px;
+  justify-content: center;
+  align-items: center;
 }
 .team-photo-sm {
-  flex: 1;
-  height: 260px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(61,28,42,0.13);
+  width: 240px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 12px 36px rgba(61,28,42,0.18);
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+.team-photo-sm:first-child {
+  transform: rotate(-4deg);
+}
+.team-photo-sm:last-child {
+  transform: rotate(3deg);
+}
+.team-photo-sm:hover {
+  transform: rotate(0deg) scale(1.04);
+  z-index: 2;
 }
 .team-photo-sm img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 .team-info {
   flex: 1;
@@ -1246,10 +1260,10 @@ footer a { color: var(--gold-light); text-decoration: none; }
       </div>
       <div class="team-photos-bottom">
         <div class="team-photo-sm">
-          <img src="madison-working2.png" alt="Madison Miller working">
+          <img src="madison-polaroid2.png" alt="Madison Miller">
         </div>
         <div class="team-photo-sm">
-          <img src="madison-phone2.png" alt="Madison Miller on a call">
+          <img src="madison-polaroid1.png" alt="Madison Miller">
         </div>
       </div>
     </div>
