@@ -1020,6 +1020,136 @@ footer a { color: var(--gold-light); text-decoration: none; }
   .btn-frost { padding: 14px 20px; font-size: 10px; letter-spacing: 2px; }
   .stat .num { font-size: 22px; }
 }
+
+/* ===== MABONX ===== */
+.mabonx {
+  padding: 110px 8% 120px;
+  background: linear-gradient(160deg, #2a1a20 0%, #3d1c2a 55%, #4a2828 100%);
+  color: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.mabonx::before {
+  content: "";
+  position: absolute;
+  top: -140px; right: -120px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217,179,106,0.18) 0%, rgba(217,179,106,0) 70%);
+}
+.mabonx .section-eyebrow { color: var(--gold-light); }
+.mabonx .mabonx-wordmark {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 62px);
+  letter-spacing: 10px;
+  color: var(--cream);
+  margin: 6px 0 4px;
+  text-transform: uppercase;
+}
+.mabonx .mabonx-rule {
+  width: 64px; height: 2px;
+  background: var(--gold);
+  margin: 18px auto 26px;
+}
+.mabonx-inner { max-width: 1020px; margin: 0 auto; text-align: center; }
+.mabonx-lead {
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--tan);
+  max-width: 720px;
+  margin: 0 auto 12px;
+}
+.mabonx-layers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 46px 0 40px;
+  text-align: left;
+}
+.mabonx-layer {
+  background: rgba(253,246,240,0.05);
+  border: 1px solid rgba(228,197,131,0.22);
+  border-radius: 4px;
+  padding: 26px 24px 28px;
+}
+.mabonx-layer-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+.mabonx-layer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.mabonx-layer p { font-size: 14px; line-height: 1.7; color: var(--tan); }
+.mabonx-synthesis {
+  border-top: 1px solid rgba(228,197,131,0.2);
+  border-bottom: 1px solid rgba(228,197,131,0.2);
+  padding: 30px 20px;
+  margin: 0 auto 42px;
+  max-width: 760px;
+}
+.mabonx-synthesis p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--gold-pale);
+}
+.mabonx-delivers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 12px;
+  margin-bottom: 44px;
+}
+.mabonx-delivers span {
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--tan);
+  border: 1px solid rgba(228,197,131,0.28);
+  border-radius: 40px;
+  padding: 9px 18px;
+}
+.btn-mabonx {
+  display: inline-block;
+  padding: 17px 46px;
+  background: var(--gold);
+  color: #2a1a20;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-mabonx:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(217,179,106,0.32);
+  background: var(--gold-light);
+}
+.mabonx-note {
+  margin-top: 18px;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  color: rgba(216,198,168,0.72);
+}
+@media (max-width: 860px) {
+  .mabonx { padding: 84px 6% 92px; }
+  .mabonx-layers { grid-template-columns: 1fr; gap: 16px; }
+  .mabonx .mabonx-wordmark { letter-spacing: 6px; }
+  .mabonx-synthesis p { font-size: 17px; }
+}
+
 </style>
 </head>
 <body>
@@ -1049,6 +1179,7 @@ footer a { color: var(--gold-light); text-decoration: none; }
     <div class="nav-links">
       <a href="#how">How It Works</a>
       <a href="#industries">Industries</a>
+      <a href="#mabonx">Mabonx</a>
       <a href="#pricing">Pricing</a>
       <a href="#team">Meet the Team</a>
       <a href="#contact">Contact</a>
@@ -1183,6 +1314,58 @@ footer a { color: var(--gold-light); text-decoration: none; }
 </section>
 
 <!-- ===== PRICING ===== -->
+
+<section class="mabonx" id="mabonx">
+  <div class="mabonx-inner">
+    <div class="section-eyebrow">Proprietary Career Intelligence</div>
+    <div class="mabonx-wordmark">Mabonx</div>
+    <div class="mabonx-rule"></div>
+    <p class="mabonx-lead">
+      Most assessments tell you what someone answered. Mabonx tells you how someone is
+      professionally wired. It is our proprietary intelligence layer, and it reads three
+      distinct systems at once.
+    </p>
+
+    <div class="mabonx-layers">
+      <div class="mabonx-layer">
+        <div class="mabonx-layer-num">01</div>
+        <h3>Personality Assessment</h3>
+        <p>A behavioural assessment measuring how you decide, communicate, take ownership and perform under pressure.</p>
+      </div>
+      <div class="mabonx-layer">
+        <div class="mabonx-layer-num">02</div>
+        <h3>Astrology</h3>
+        <p>The career-relevant patterns in your chart: temperament, drive, timing and how you read other people.</p>
+      </div>
+      <div class="mabonx-layer">
+        <div class="mabonx-layer-num">03</div>
+        <h3>Numerology</h3>
+        <p>Your numerical profile, interpreted strictly for professional themes rather than general life prediction.</p>
+      </div>
+    </div>
+
+    <div class="mabonx-synthesis">
+      <p>
+        The value is not in any one layer. It is in where the three converge, and where they
+        disagree. That is where the useful career intelligence lives.
+      </p>
+    </div>
+
+    <div class="mabonx-delivers">
+      <span>Professional Archetype</span>
+      <span>Best-Fit Roles</span>
+      <span>Ideal Work Environment</span>
+      <span>Leadership Style</span>
+      <span>Motivators</span>
+      <span>Blind Spots</span>
+      <span>Career DNA</span>
+    </div>
+
+    <a href="https://candidate-assessment-u6nm.onrender.com" class="btn-mabonx" target="_blank" rel="noopener">Discover Your Mabonx Profile</a>
+    <p class="mabonx-note">Takes about 5 minutes. Your behavioural profile is included at no cost.</p>
+  </div>
+</section>
+
 <section class="pricing" id="pricing">
   <div class="section-eyebrow">Investment</div>
   <h2 class="section-heading">Placement Packages</h2>
