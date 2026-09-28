@@ -6,8 +6,6 @@ services:
     buildCommand: npm install
     startCommand: npm start
     envVars:
-      - key: PORT
-        generateValue: false
       - key: SITE_URL
         sync: false
       - key: STRIPE_SECRET_KEY
